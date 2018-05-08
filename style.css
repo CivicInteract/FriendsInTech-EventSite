@@ -33,7 +33,7 @@ p {
   line-height: 28px; }
 
 a {
-  text-decoration: none; }
+  color: inherit; }
 
 .gradient {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ba8dc0+0,7fa7d8+100 */
@@ -113,6 +113,9 @@ header {
     height: 220px;
     z-index: -1; }
 
+ul {
+  padding: 0; }
+
 ul li {
   list-style: none; }
 
@@ -157,6 +160,26 @@ nav ul li {
     background-color: #FFF;
     z-index: 1;
     border-radius: 6px; }
+  .borderArea .btn {
+    position: absolute;
+    z-index: 2;
+    bottom: -28px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border: 6px solid #FFF;
+    color: #FFF; }
+    .borderArea .btn:after {
+      content: '';
+      position: absolute;
+      background: #7fa7d8;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 6px; }
 
 .borderArea-col {
   float: left;
@@ -167,39 +190,28 @@ nav ul li {
   text-align: left; }
 
 .btn {
-  position: absolute;
-  z-index: 2;
-  bottom: -28px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
   border-radius: 6px;
   padding: 15px 60px;
   text-transform: uppercase;
-  color: #FFF;
   font-size: 20px;
-  border: 6px solid #FFF; }
-  .btn:after {
-    content: '';
-    position: absolute;
-    background: #7fa7d8;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 6px; }
+  text-decoration: none;
+  position: relative;
+  background: #FFF;
+  color: #7fa7d8; }
 
 .agenda {
   clear: both;
   text-align: center;
-  padding: 60px 0; }
+  padding: 60px 0;
+  display: table;
+  margin-left: auto;
+  margin-right: auto; }
   .agenda > .container {
     max-width: 1000px; }
   .agenda h2 {
     color: #7fa7d8;
-    margin-top: 0; }
+    margin-top: 0;
+    margin-bottom: 50px; }
 
 .agenda-col {
   text-align: left;
@@ -207,13 +219,14 @@ nav ul li {
   width: 50%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 15px; }
+  padding: 0 30px; }
   .agenda-col span {
     background: #ba8dc0;
     color: #FFF;
     padding-left: 5px;
     padding-right: 5px;
-    font-size: 18px; }
+    font-size: 18px;
+    text-transform: uppercase; }
   .agenda-col p {
     margin-top: 5px;
     font-size: 20px; }
@@ -234,3 +247,56 @@ nav ul li {
     text-align: left;
     max-height: 350px;
     overflow-y: scroll; }
+    .coc .coc-inner h1 {
+      font-weight: bold;
+      font-size: 14px;
+      font-family: 'Oxygen Mono';
+      color: #000; }
+    .coc .coc-inner h2 {
+      font-weight: bold;
+      font-size: 12px;
+      font-family: 'Oxygen Mono';
+      color: #000;
+      margin-top: 30px; }
+    .coc .coc-inner p {
+      font-size: 12px; }
+
+.registerCta {
+  text-align: center;
+  padding: 80px 30px;
+  padding-top: 100px; }
+  .registerCta h3 {
+    margin: 0;
+    margin-top: 75px;
+    color: #FFF; }
+  .registerCta .btn {
+    font-size: 24px; }
+
+.legal {
+  background: #e6edf7; }
+
+.partners {
+  text-align: center;
+  padding: 60px 0; }
+  .partners h2 {
+    color: #7fa7d8;
+    margin-top: 0; }
+
+footer > .container {
+  position: relative; }
+
+footer nav {
+  margin-top: 100px;
+  padding-bottom: 20px; }
+  footer nav ul li:first-child {
+    padding-left: 0; }
+
+footer p {
+  margin: 0;
+  padding: 15px 0; }
+
+footer img {
+  width: 142px;
+  position: absolute;
+  right: 0;
+  bottom: -30px; }
