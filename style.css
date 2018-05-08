@@ -14,18 +14,27 @@ body {
 
 h1 {
   font-family: 'Karla';
-  font-size: 48px;
+  font-size: 24px;
   color: #7fa7d8; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 48px; } }
 
 h2 {
   font-family: 'Karla';
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 36px; }
+  font-size: 24px; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 36px; } }
 
 h3 {
   text-transform: uppercase;
-  font-size: 24px; }
+  font-size: 18px; }
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 24px; } }
 
 p {
   font-family: 'Oxygen Mono';
@@ -77,10 +86,12 @@ a {
 .speakerCol {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 25%;
-  float: left;
-  padding: 0 10px;
+  padding: 15px 10px;
   text-align: left; }
+  @media (min-width: 768px) {
+    .speakerCol {
+      width: 25%;
+      float: left; } }
   .speakerCol img {
     border-radius: 8px;
     max-width: 100%;
@@ -95,13 +106,21 @@ a {
   height: 18px; }
 
 header {
-  height: 370px;
+  height: 340px;
   position: relative;
   text-align: center; }
+  @media (min-width: 768px) {
+    header {
+      height: 370px; } }
   header img {
     position: absolute;
     bottom: 30px;
-    margin-left: -110px; }
+    width: 160px;
+    margin-left: -80px; }
+    @media (min-width: 768px) {
+      header img {
+        margin-left: -110px;
+        width: 221px; } }
   header:after {
     position: absolute;
     background: #e6edf7;
@@ -129,6 +148,16 @@ nav ul li {
   text-transform: uppercase;
   font-size: 16px; }
 
+@media (max-width: 992px) {
+  .mainNav {
+    white-space: nowrap; } }
+
+@media (max-width: 992px) {
+  .mainNav ul {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 15px; } }
+
 .eventInfo {
   text-align: center;
   padding-bottom: 50px; }
@@ -141,10 +170,13 @@ nav ul li {
 .borderArea {
   border-radius: 8px;
   float: left;
-  padding: 50px;
+  padding: 15px 15px 30px 15px;
   padding-top: 30px;
   margin: 50px 0 100px 0;
   position: relative; }
+  @media (min-width: 768px) {
+    .borderArea {
+      padding: 50px; } }
   .borderArea h2, .borderArea .borderArea-col {
     z-index: 2;
     position: relative; }
@@ -182,12 +214,14 @@ nav ul li {
       border-radius: 6px; }
 
 .borderArea-col {
-  float: left;
-  width: 50%;
   padding: 15px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: left; }
+  @media (min-width: 768px) {
+    .borderArea-col {
+      float: left;
+      width: 50%; } }
 
 .btn {
   border-radius: 6px;
@@ -204,8 +238,12 @@ nav ul li {
   text-align: center;
   padding: 60px 0;
   display: table;
+  width: 100%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  background-image: url(images/shape.png);
+  background-repeat: no-repeat;
+  background-position: 100% 850%; }
   .agenda > .container {
     max-width: 1000px; }
   .agenda h2 {
@@ -215,11 +253,14 @@ nav ul li {
 
 .agenda-col {
   text-align: left;
-  float: left;
-  width: 50%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 30px; }
+  padding: 0 15px; }
+  @media (min-width: 768px) {
+    .agenda-col {
+      float: left;
+      width: 50%;
+      padding: 0 30px; } }
   .agenda-col span {
     background: #ba8dc0;
     color: #FFF;
@@ -229,17 +270,40 @@ nav ul li {
     text-transform: uppercase; }
   .agenda-col p {
     margin-top: 5px;
-    font-size: 20px; }
+    font-size: 16px; }
+    @media (min-width: 768px) {
+      .agenda-col p {
+        font-size: 20px; } }
   .agenda-col article {
     margin-bottom: 30px; }
 
 .coc {
   clear: both;
+  position: relative;
   text-align: center;
   background: #e6edf7;
   padding: 50px 0; }
   .coc > .container {
-    max-width: 1000px; }
+    max-width: 1000px;
+    position: relative; }
+    .coc > .container:after {
+      position: absolute;
+      content: '';
+      height: 100px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,e6edf7+100&0+0,1+100 */
+      background: -moz-linear-gradient(top, rgba(125, 185, 232, 0) 0%, #e6edf7 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(125, 185, 232, 0) 0%, #e6edf7 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(125, 185, 232, 0)), to(#e6edf7));
+      background: -o-linear-gradient(top, rgba(125, 185, 232, 0) 0%, #e6edf7 100%);
+      background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, #e6edf7 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#e6edf7',GradientType=0 );
+      /* IE6-9 */ }
   .coc h2 {
     color: #7fa7d8;
     margin-top: 0; }
@@ -274,6 +338,9 @@ nav ul li {
 
 .legal {
   background: #e6edf7; }
+  @media (max-width: 768px) {
+    .legal {
+      padding-top: 30px; } }
 
 .partners {
   text-align: center;
@@ -286,10 +353,12 @@ footer > .container {
   position: relative; }
 
 footer nav {
-  margin-top: 100px;
   padding-bottom: 20px; }
   footer nav ul li:first-child {
     padding-left: 0; }
+  @media (min-width: 768px) {
+    footer nav {
+      margin-top: 100px; } }
 
 footer p {
   margin: 0;
@@ -297,6 +366,13 @@ footer p {
 
 footer img {
   width: 142px;
-  position: absolute;
-  right: 0;
-  bottom: -30px; }
+  bottom: -30px;
+  position: relative; }
+  @media (min-width: 768px) {
+    footer img {
+      position: absolute;
+      right: 15px; } }
+
+@media (max-width: 768px) {
+  footer {
+    text-align: center; } }

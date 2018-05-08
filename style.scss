@@ -1,6 +1,8 @@
 $lightBlue: #e6edf7;
 $blue: #7fa7d8;
 $pink: #ba8dc0;
+$screen-sm: 768px;
+$screen-md: 992px;
 
 body {
   margin:0;
@@ -19,20 +21,32 @@ body {
 
 h1 {
   font-family: 'Karla';
-  font-size: 48px;
+  font-size: 24px;
   color:$blue;
+
+  @media (min-width: $screen-sm ) {
+    font-size:48px;
+  }
 }
   
 h2 {
   font-family: 'Karla';
   font-weight:700;
   text-transform:uppercase;
-  font-size:36px;
+  font-size:24px;
+
+  @media (min-width: $screen-sm ) {
+    font-size:36px;
+  }
 }
 
 h3 {
   text-transform:uppercase;
-  font-size:24px;
+  font-size:18px;
+
+  @media (min-width: $screen-sm ) {
+    font-size:24px;
+  }
 }
 
 p {
@@ -78,10 +92,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ba8dc0', end
   
 .speakerCol {
   box-sizing:border-box;
-  width:25%; 
-  float:left;
-  padding:0 10px;
+  padding:15px 10px;
   text-align:left;
+
+  @media (min-width: $screen-sm) {
+    width:25%; 
+    float:left;
+  }
   
   img {
     border-radius:8px;
@@ -104,14 +121,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ba8dc0', end
 }
 
 header {
-  height:370px;
+  height:340px;
   position:relative;
   text-align:center;
+
+  @media (min-width: $screen-sm) {
+    height:370px;
+  }
   
   img {
     position:absolute;
     bottom:30px;
-    margin-left:-110px;
+    width: 160px;
+    margin-left: -80px;
+
+    @media (min-width: $screen-sm) {
+      margin-left:-110px;
+      width: 221px;
+    }
   }
   
   &:after {
@@ -147,6 +174,20 @@ nav ul li {
   font-size:16px;
 }
 
+.mainNav {
+  @media (max-width: $screen-md) {
+    white-space: nowrap;
+  }
+
+  ul {
+    @media (max-width: $screen-md) {
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: 15px;
+    }
+  }
+}
+
 .eventInfo {
   text-align:center;
   padding-bottom:50px;
@@ -164,10 +205,14 @@ nav ul li {
 .borderArea {
   border-radius:8px;
   float:left;
-  padding:50px;
+  padding:15px 15px 30px 15px;
   padding-top:30px;
   margin:50px 0 100px 0;
   position:relative;
+
+  @media (min-width: $screen-sm) {
+    padding:50px;
+  }
   
   h2, .borderArea-col {
     z-index:2;
@@ -214,11 +259,14 @@ nav ul li {
 }
 
 .borderArea-col {
-  float:left;
-  width:50%;
   padding:15px;
   box-sizing:border-box;
   text-align:left;
+
+  @media (min-width: $screen-sm) {
+    float:left;
+    width:50%;
+  }
 }
 
 .btn {
@@ -237,8 +285,13 @@ nav ul li {
   text-align:center;
   padding: 60px 0;
   display: table;
+  width:100%;
   margin-left: auto;
   margin-right: auto;
+
+  background-image: url(images/shape.png);
+  background-repeat: no-repeat;
+  background-position: 100% 850%;
   
   > .container {
     max-width:1000px;
@@ -253,10 +306,14 @@ nav ul li {
 
 .agenda-col {
   text-align:left;
-  float:left;
-  width:50%;
   box-sizing:border-box;
-  padding: 0 30px;
+  padding: 0 15px;
+
+  @media (min-width: $screen-sm) {
+    float:left;
+    width:50%;
+    padding: 0 30px;
+  }
   
   span {
     background: $pink;
@@ -269,7 +326,11 @@ nav ul li {
   
   p {
     margin-top:5px;
-    font-size:20px;
+    font-size:16px;
+
+    @media (min-width: $screen-sm) {
+      font-size:20px;
+    }
   }
   
   article {
@@ -279,12 +340,28 @@ nav ul li {
 
 .coc {
   clear:both;
+  position:relative;
   text-align:center;
   background:$lightBlue;
   padding: 50px 0;
   
   > .container {
     max-width:1000px;
+    position:relative;
+
+    &:after {
+      position:absolute;
+      content:'';
+      height:100px;
+      right:0;
+      left:0;
+      bottom:0;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,e6edf7+100&0+0,1+100 */
+      background: -moz-linear-gradient(top, rgba(125,185,232,0) 0%, rgba(230,237,247,1) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, rgba(125,185,232,0) 0%,rgba(230,237,247,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(125,185,232,0) 0%,rgba(230,237,247,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#e6edf7',GradientType=0 ); /* IE6-9 */
+    }
   }
   
   h2 {
@@ -336,6 +413,10 @@ nav ul li {
 
 .legal {
   background: $lightBlue;
+
+  @media (max-width: $screen-sm) {
+    padding-top:30px;
+  }
 }
 
 .partners {
@@ -355,11 +436,14 @@ footer {
   }
 
   nav {
-    margin-top:100px;
     padding-bottom:20px;
 
     ul li:first-child {
       padding-left:0;
+    }
+
+    @media (min-width: $screen-sm) {
+      margin-top:100px;
     }
   }
 
@@ -370,9 +454,16 @@ footer {
 
   img {
     width:142px;
-    position:absolute;
-    right:0;
     bottom:-30px;
+    position:relative;
 
+    @media (min-width: $screen-sm) {
+      position:absolute;
+      right:15px;
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    text-align:center;
   }
 }

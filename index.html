@@ -11,21 +11,21 @@
 <body>
 	<header>
 		<div class="topBar gradient"></div>
-		<nav>
+		<nav class="mainNav">
 			<ul>
-				<li>about</li>
-				<li>register</li>
-				<li>speakers</li>
-				<li>agenda</li>
-				<li>code of conduct</li>
-				<li>event partners</li>
+				<li><a href="#about">about</a></li>
+				<li><a href="#speakers">speakers</a></li>
+				<li><a href="#agenda">agenda</a></li>
+				<li><a href="#coc">code of conduct</a></li>
+				<li><a href="#partners">event partners</a></li>
+				<li><a href="#register">register</a></li>
 			</ul>
 		</nav>
 		<img src="https://static1.squarespace.com/static/56b3dd6df850829aa1bfb45f/t/5aefb049352f535b34e7343c/1525657675298/fit-logo.png?format=1000w" width="221">
 	</header>
 	<section class="eventInfo">
 		<div class="container">
-			<h1>FriendsInTech - a free workshop event for young girls focused on female camaraderie in tech.</h1>
+			<h1 id="about">FriendsInTech - a free workshop event for young girls focused on female camaraderie in tech.</h1>
 			<h3>June 23rd, 2018 <span>/</span> Suffolk Community College - Grant Campus <span>/</span> 9am - 5pm</h3>
 			<div class="borderArea gradient--vert">
 				<h2>What is the purpose of this event?</h2>
@@ -45,7 +45,7 @@
 			<h3>any questions, contact <a href="learnmore@civicinteract.com">learnmore@civicinteract.com</a> </h3>
 		</div>
 	</section>
-	<section class="speakers gradient">
+	<section class="speakers gradient" id="speakers">
 		<div class="container">
 			<h2>Speakers</h2>
 			<div class="speakerCol">
@@ -74,7 +74,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="agenda">
+	<section class="agenda" id="agenda">
 		<div class="container">
 			<h2>Agenda</h2>
 			<div class="agenda-col">
@@ -128,7 +128,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="coc">
+	<section class="coc" id="coc">
 		<div class="container">
 			<h2>Code of Conduct</h2>
 			<div class="coc-inner">
@@ -188,18 +188,18 @@
 			<p>Revision 2.2. Posted 4 February 2016.</p>
 			<p>Revision 2.1. Posted 23 June 2014.</p>
 			<p>Revision 2.0, adopted by the Stumptown Syndicate board on 10 January 2013. Posted 17 March 2013.<em>**</em></p>
-
+			<br><br><br><br><br><br>
 			</div>
 		</div>
 	</section>
 
-	<section class="partners">
+	<section class="partners" id="partners">
 		<div class="container">
 			<h2>Event Sponsors &amp; Partners</h2>
 		</div>
 	</section>
 
-	<section class="registerCta gradient">
+	<section class="registerCta gradient" id="register">
 		<div class="container">
 			<a class="btn" href="#">Register</a>
 			<h3>any questions, contact <a href="learnmore@civicinteract.com">learnmore@civicinteract.com</a> </h3>
@@ -208,14 +208,14 @@
 
 	<footer>
 		<div class="container">
-			<nav>
+			<nav class="mainNav mainNav--footer">
 				<ul>
-					<li>about</li>
-					<li>register</li>
-					<li>speakers</li>
-					<li>agenda</li>
-					<li>code of conduct</li>
-					<li>event partners</li>
+					<li><a href="#about">about</a></li>
+					<li><a href="#speakers">speakers</a></li>
+					<li><a href="#agenda">agenda</a></li>
+					<li><a href="#coc">code of conduct</a></li>
+					<li><a href="#partners">event partners</a></li>
+					<li><a href="#register">register</a></li>
 				</ul>
 			</nav>
 			<img src="https://static1.squarespace.com/static/56b3dd6df850829aa1bfb45f/t/5aefb049352f535b34e7343c/1525657675298/fit-logo.png?format=1000w" width="221">
@@ -226,5 +226,25 @@
 			</div>
 		</div>
 	</footer>
+
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+		  $('.mainNav a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top
+		        }, 800);
+		        return false;
+		      }
+		    }
+		  });
+		});   
+	</script>
 </body>
 </html>
