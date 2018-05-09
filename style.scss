@@ -88,6 +88,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ba8dc0', end
     color: #FFF;
     margin-top:0;
   }
+
  }
   
 .speakerCol {
@@ -104,6 +105,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ba8dc0', end
     border-radius:8px;
     max-width:100%;
     height:auto;
+
+    display:none;
   }
   
   h3 {
@@ -113,6 +116,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ba8dc0', end
   
   p {
     font-size:12px;
+
+    display:none;
   }
 }
 
@@ -427,6 +432,48 @@ nav ul li {
     color: $blue;
     margin-top:0;
   }
+
+  > .container {
+    display:table;
+  }
+}
+
+.partnerLogo-col {
+  padding: 15px;
+  box-sizing:border-box;
+  transition: .3s opacity;
+
+  &:hover {
+    opacity:0.6;
+  }
+
+  width:50%;
+  float:left;
+
+  @media (min-width: $screen-sm) {
+    width:20%;
+  }
+
+  img {
+    max-width:100%;
+    height:auto;
+  }
+}
+
+.partners--organizers {
+
+  .partnerLogo-col {
+    margin-top:30px;
+
+    @media (min-width: $screen-sm) {
+      display: inline-block;
+      float: none;
+    }
+
+    img {
+      border-radius: 50%;
+    }
+  }
 }
 
 footer {
@@ -467,3 +514,4 @@ footer {
     text-align:center;
   }
 }
+

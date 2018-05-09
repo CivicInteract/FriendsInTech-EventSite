@@ -95,12 +95,14 @@ a {
   .speakerCol img {
     border-radius: 8px;
     max-width: 100%;
-    height: auto; }
+    height: auto;
+    display: none; }
   .speakerCol h3 {
     color: #FFF;
     margin-bottom: 10px; }
   .speakerCol p {
-    font-size: 12px; }
+    font-size: 12px;
+    display: none; }
 
 .topBar {
   height: 18px; }
@@ -348,6 +350,35 @@ nav ul li {
   .partners h2 {
     color: #7fa7d8;
     margin-top: 0; }
+  .partners > .container {
+    display: table; }
+
+.partnerLogo-col {
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: .3s opacity;
+  -o-transition: .3s opacity;
+  transition: .3s opacity;
+  width: 50%;
+  float: left; }
+  .partnerLogo-col:hover {
+    opacity: 0.6; }
+  @media (min-width: 768px) {
+    .partnerLogo-col {
+      width: 20%; } }
+  .partnerLogo-col img {
+    max-width: 100%;
+    height: auto; }
+
+.partners--organizers .partnerLogo-col {
+  margin-top: 30px; }
+  @media (min-width: 768px) {
+    .partners--organizers .partnerLogo-col {
+      display: inline-block;
+      float: none; } }
+  .partners--organizers .partnerLogo-col img {
+    border-radius: 50%; }
 
 footer > .container {
   position: relative; }
