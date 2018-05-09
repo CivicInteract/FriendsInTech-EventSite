@@ -259,7 +259,19 @@ nav ul li {
       left:0;
       z-index:-1;
       border-radius:6px;
+
+      transition:.3s;
+      -webkit-transition: .3s;
     }
+
+    &:hover {
+      color: #fff;
+
+      &:after {
+        background: $pink;
+      }
+    }
+
   }
 }
 
@@ -283,6 +295,13 @@ nav ul li {
   position:relative;
   background: #FFF;
   color: $blue;
+  position:relative;
+  transition:.3s color;
+  -webkit-transition: .3s color;
+
+  &:hover {
+    color: $pink;
+  }
 }
 
 .agenda {

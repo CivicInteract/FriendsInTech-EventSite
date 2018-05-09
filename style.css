@@ -213,7 +213,14 @@ nav ul li {
       bottom: 0;
       left: 0;
       z-index: -1;
-      border-radius: 6px; }
+      border-radius: 6px;
+      -o-transition: .3s;
+      transition: .3s;
+      -webkit-transition: .3s; }
+    .borderArea .btn:hover {
+      color: #fff; }
+      .borderArea .btn:hover:after {
+        background: #ba8dc0; }
 
 .borderArea-col {
   padding: 15px;
@@ -233,7 +240,13 @@ nav ul li {
   text-decoration: none;
   position: relative;
   background: #FFF;
-  color: #7fa7d8; }
+  color: #7fa7d8;
+  position: relative;
+  -o-transition: .3s color;
+  transition: .3s color;
+  -webkit-transition: .3s color; }
+  .btn:hover {
+    color: #ba8dc0; }
 
 .agenda {
   clear: both;
