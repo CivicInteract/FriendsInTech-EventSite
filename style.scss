@@ -1,6 +1,7 @@
 $lightBlue: #e6edf7;
 $blue: #7fa7d8;
 $pink: #ba8dc0;
+$purple: #989cce;
 $screen-sm: 768px;
 $screen-md: 992px;
 
@@ -188,6 +189,15 @@ nav ul li {
   font-size:16px;
 }
 
+nav a {
+  transition:.3s;
+  -webkit-transition: .3s;
+
+  &:hover {
+    color:$purple;
+  }
+}
+
 .mainNav {
   @media (max-width: $screen-md) {
     white-space: nowrap;
@@ -277,7 +287,7 @@ nav ul li {
       color: #fff;
 
       &:after {
-        background: $pink;
+        background: $purple;
       }
     }
 
@@ -309,7 +319,7 @@ nav ul li {
   -webkit-transition: .3s color;
 
   &:hover {
-    color: $pink;
+    color: $purple;
   }
 }
 

@@ -158,6 +158,13 @@ nav ul li {
   text-transform: uppercase;
   font-size: 16px; }
 
+nav a {
+  -o-transition: .3s;
+  transition: .3s;
+  -webkit-transition: .3s; }
+  nav a:hover {
+    color: #989cce; }
+
 @media (max-width: 992px) {
   .mainNav {
     white-space: nowrap; } }
@@ -228,7 +235,7 @@ nav ul li {
     .borderArea .btn:hover {
       color: #fff; }
       .borderArea .btn:hover:after {
-        background: #ba8dc0; }
+        background: #989cce; }
 
 .borderArea-col {
   padding: 15px;
@@ -254,7 +261,7 @@ nav ul li {
   transition: .3s color;
   -webkit-transition: .3s color; }
   .btn:hover {
-    color: #ba8dc0; }
+    color: #989cce; }
 
 .agenda {
   clear: both;
