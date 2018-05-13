@@ -398,16 +398,21 @@ nav a {
   .partnerLogo-col img {
     max-width: 100%;
     height: auto; }
-
-.partners--organizers .partnerLogo-col {
-  margin-top: 30px; }
-  @media (min-width: 768px) {
-    .partners--organizers .partnerLogo-col {
-      display: inline-block;
-      float: none;
-      width: 20%; } }
-  .partners--organizers .partnerLogo-col img {
+  .partnerLogo-col.partnerLogo-col--organizer img {
     border-radius: 50%; }
+
+.partners--organizers {
+  position: relative;
+  clear: both; }
+  .partners--organizers .partnerLogo-col {
+    margin-top: 30px; }
+    @media (min-width: 768px) {
+      .partners--organizers .partnerLogo-col {
+        display: inline-block;
+        float: none;
+        width: 20%; } }
+    .partners--organizers .partnerLogo-col img {
+      border-radius: 50%; }
 
 footer > .container {
   position: relative; }
