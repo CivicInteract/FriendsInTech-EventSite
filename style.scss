@@ -489,9 +489,10 @@ nav a {
   float:left;
 
   @media (min-width: $screen-sm) {
-    width:20.5%;
+    width:19.5%;
     float:none;
     display:inline-block;
+    font-size:0;
   }
 
   img {

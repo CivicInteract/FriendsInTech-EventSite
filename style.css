@@ -394,9 +394,10 @@ nav a {
     opacity: 0.6; }
   @media (min-width: 768px) {
     .partnerLogo-col {
-      width: 20.5%;
+      width: 19.5%;
       float: none;
-      display: inline-block; } }
+      display: inline-block;
+      font-size: 0; } }
   .partnerLogo-col img {
     max-width: 100%;
     height: auto; }
